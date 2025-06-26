@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Day 1 Training</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <form id="quizForm">
+      <!-- Step 1: Name -->
+      <div class="step active">
+        <h2>Please type your name and your id</h2>
+        <input type="text" name="name"  id = "Name" required placeholder="Example:Damian Cerbets | 889" />
+        <button type="button" class="next">Next</button>
+      </div>
+
+      <!-- Step 2: Question -->
+      <div class="step">
+        <h2>Choose the right answer for going on Duty:</h2>
+        <label><input type="radio" name="q1" value="10-4 PH2 replacing Damian" required /> 10-4 PH2 replacing Damian</label><br />
+        <label><input type="radio" name="q1" value="10-5 PH replacing Damian" /> 10-5 PH replacing Damian</label><br />
+        <label><input type="radio" name="q1" value="10-5 PH2" /> 10-5 PH2 </label><br />
+        <button type="button" class="next">Next</button>
+      </div>
+    <div class="step">
+  <h2>What does "10-7 PH2" mean in the correct context?</h2>
+  <label><input type="radio" name="q2" value="Taking break in PH2" required /> Taking break in PH2</label><br />
+  <label><input type="radio" name="q2" value="Starting duty at PH2" /> Starting duty at PH2</label><br />
+  <label><input type="radio" name="q2" value="Finishing duty at PH2" /> Finishing duty at PH2</label><br />
+  <button type="button" class="next">Next</button>
+</div>
+
+<div class="step">
+  <h2>What would you do if you had a Code-A while being alone in PH1 lobby?</h2>
+  <label><input type="radio" name="q3" value="Tag @EMS in Code-A logs and mention PH1 lobby and the Reason of Code A" required /> Tag @EMS in Code-A logs and mention PH1 lobby and the Reason of Code A</label><br />
+  <label><input type="radio" name="q3" value="Just write Code-A and the Reason of Code A, no tagging needed" /> Just write Code-A and the Reason of Code A, no tagging needed</label><br />
+  <label><input type="radio" name="q3" value="Say 10-9 and go offline" /> Say 10-9 and go offline</label><br />
+  <button type="button" class="next">Next</button>
+</div>
+
+
+<div class="step">
+  <h2>How do you properly respond to HC asking for your 10-20?</h2>
+  <label><input type="radio" name="q4" value="10-20 PH1 lobby" required /> 10-20 PH1 lobby</label><br />
+  <label><input type="radio" name="q4" value="10-4 PH1 (PH2 /SH / Calls / medrun or etc)" /> 10-4 PH1 (PH2 /SH / Calls / medrun or etc)</label><br />
+  <label><input type="radio" name="q4" value="PH2, SH, or Calls, depends on where I am(without 10-4 Radio-code)" /> PH2, SH, or Calls, depends on where I am(without 10-4 Radio-code)</label><br />
+  <button type="button" class="next">Next</button>
+</div>
+
+<div class="step">
+  <h2>Where is the plastic surgery in SH?</h2>
+  <label><input type="radio" name="q5" value="2nd floor, right side" required /> 2nd floor, right side</label><br />
+  <label><input type="radio" name="q5" value="4th floor" /> 4th floor</label><br />
+  <label><input type="radio" name="q5" value="Lobby area" /> Lobby area</label><br />
+  <button type="button" class="next">Next</button>
+</div>
+
+<div class="step">
+  <h2>Which of the following is a correct 10-9 usage?</h2>
+  <label><input type="radio" name="q6" value="10-9 PH2 On duty now" required /> 10-9 PH2 On duty now</label><br />
+  <label><input type="radio" name="q6" value="10-9 PH2 replacing John" /> 10-9 PH2 replacing John</label><br />
+  <label><input type="radio" name="q6" value="10-9 PH2 10 min" /> 10-9 PH2 10 min</label><br />
+  <label><input type="radio" name="q6" value="10-9 PH2 11 min" /> 10-9 PH2 11 min</label><br />
+
+  <button type="button" class="next">Next</button>
+</div>
+
+<div class="step">
+  <h2>What should you do during a 10-10 situation?</h2>
+  <label><input type="radio" name="q7" value="Leave the area immediately and write radio-code 10-10 and Yellow location" required /> Leave the area immediately and write radio-code 10-10 and Yellow location</label><br />
+  <label><input type="radio" name="q7" value="Report Code-A" /> Report Code-A</label><br />
+  <label><input type="radio" name="q7" value="Call 10-5 PH2" /> Call 10-5 PH2</label><br />
+  <button type="button" class="next">Next</button>
+</div>
+<div class="step">
+  <h2>Who can ask for your 10-20 and where?</h2>
+  <label><input type="radio" name="q8" value="Any EMS member in general radio" required /> Any EMS member in general radio</label><br />
+  <label><input type="radio" name="q8" value="Only HC in RP or Voice Radio" /> Only HC in RP or Voice Radio</label><br />
+  <label><input type="radio" name="q8" value="Supervisors in OOC chat" /> Supervisors in OOC chat</label><br />
+  <button type="button" class="next">Next</button>
+</div>
+
+<div class="step">
+  <h2>How should you log a Code-A properly?</h2>
+  <label><input type="radio" name="q9" value="In the Code-A logs channel under EMS Email/Discord" required /> In the Code-A logs channel under EMS Discord</label><br />
+  <label><input type="radio" name="q9" value="Just write crash in general chat" /> Just write "crash" in general chat</label><br />
+  <label><input type="radio" name="q9" value="Send message to supervisor privately" /> Send message to supervisor privately</label><br />
+  <button type="button" class="next">Next</button>
+</div>
+<div class="step">
+  <h2>What would you do if you had a Code-A while being alone on Calls?</h2>
+  <label><input type="radio" name="q10" value="Tag @EMS in Code-A logs and mention On calls and the Reason of Code A" required /> Tag @EMS in Code-A logs and mention On calls and the Reason of Code A</label><br />
+  <label><input type="radio" name="q10" value="Just write Code-A and the Reason of Code A, no tagging needed" /> Just write Code-A and the Reason of Code A, no tagging needed</label><br />
+  <label><input type="radio" name="q10" value="Say 10-9 and go offline" /> Say 10-9 and go offline</label><br />
+  <button type="button" class="next">Next</button>
+</div>
+
+      <!-- Step 3: Submit -->
+      <div class="step">
+        <h2>Finish</h2>
+        <p>Click submit to send your answers.</p>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    <div id="thanks" class="hidden">✅ Your answers were sent to Telegram!</div>
+  </div>
+  <div id="alreadySubmittedPopup" class="popup hidden">
+  <div class="popup-content">
+    <p>📨 You already filled the quiz!</p>
+    <button onclick="closePopup()">OK</button>
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
