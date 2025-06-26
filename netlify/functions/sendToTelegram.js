@@ -12,10 +12,10 @@ export async function handler(event) {
       };
     }
 
-    let message = `📩 New Form Submission:\n\n👤 Name: ${data2.name}\n\n`;
+    let message = `📩 New Form Submission:\n\n👤 Name: ${data.name}\n\n`;
 
 for (let i = 1; i <= 12; i++) {
-  message += `❓ Question ${i}: ${data2[`q${i}`]}\n`;
+  message += `❓ Question ${i}: ${data[`q${i}`]}\n`;
 }
     const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
       method: "POST",
