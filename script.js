@@ -12,7 +12,7 @@ let currentStep = 0;
     q9: "In the Code-A logs channel under EMS Email/Discord",
     q10: "Just write Code-A and the Reason of Code A, no tagging needed", // Add if you have more questions
     q11: "$1,000 without insurance, same price with medical insurance",
-    q12: "?"
+    q12: "$1,300 med kit,$500 pill with insurance,70k sex change"
   };
 // Attach click listeners to all "Next" buttons
 document.querySelectorAll(".next").forEach((btn, index) => {
@@ -23,7 +23,18 @@ document.querySelectorAll(".next").forEach((btn, index) => {
     }
   });
 });
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    console.log('Пользователь переключился на другую вкладку или свернул окно');
+    // Отправьте это событие на сервер или сохраните локально
+  } else {
+    alert("This is just a simple check to test you. Please don't look up the answers — it's totally fine if you get something wrong, nothing bad will happen.")
+  }
+});
+window.addEventListener('focus', () => {
+      alert("This is just a simple check to test you. Please don't look up the answers — it's totally fine if you get something wrong, nothing bad will happen.")
 
+});
 function validateStep(stepIndex) {
   // Step 0: Validate Name
   if (stepIndex === 0) {
@@ -55,12 +66,12 @@ function validateStep(stepIndex) {
 
 }
 document.addEventListener("DOMContentLoaded", () => {
-  if (localStorage.getItem("quizSubmitted") === "true") {
+  if (localStorage.getItem("quizSubmitted2") === "true") {
     document.getElementById("alreadySubmittedPopup").classList.remove("hidden");
   }
 });
 document.getElementById("quizForm").addEventListener("submit", async e => {
-   if (localStorage.getItem("quizSubmitted") === "true") {
+   if (localStorage.getItem("quizSubmitted2") === "true") {
     document.getElementById("quizForm").innerHTML = "<p>Вы уже отправили форму.</p>";
     return;
   }
@@ -95,7 +106,7 @@ document.getElementById("quizForm").addEventListener("submit", async e => {
   if (response.ok) {
     document.getElementById("quizForm").remove();
     document.getElementById("thanks").classList.remove("hidden");
-    localStorage.setItem("quizSubmitted","true")
+    localStorage.setItem("quizSubmitted2","true")
   } else {
     alert("Failed to send. Try again.");
   }
