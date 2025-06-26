@@ -28,11 +28,11 @@ document.addEventListener('visibilitychange', () => {
     console.log('Пользователь переключился на другую вкладку или свернул окно');
     // Отправьте это событие на сервер или сохраните локально
   } else {
-    alert("This is just a simple check to test you. Please don't look up the answers — it's totally fine if you get something wrong, nothing bad will happen.")
+    alert("2This is just a simple check to test you. Please don't look up the answers — it's totally fine if you get something wrong, nothing bad will happen.")
   }
 });
 window.addEventListener('focus', () => {
-      alert("This is just a simple check to test you. Please don't look up the answers — it's totally fine if you get something wrong, nothing bad will happen.")
+      alert("1This is just a simple check to test you. Please don't look up the answers — it's totally fine if you get something wrong, nothing bad will happen.")
 
 });
 function validateStep(stepIndex) {
