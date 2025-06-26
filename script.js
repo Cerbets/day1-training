@@ -2,7 +2,7 @@ const steps = document.querySelectorAll(".step");
 let currentStep = 0;
   const correctAnswers = {
     q1: "10-5 PH2",
-    q2: "Finishing duty at PH2",
+    q2: "Using 10-7 without typing replacing is prohibited",
     q3: "Tag @EMS in Code-A logs and mention PH1 lobby and the Reason of Code A",
     q4: "10-4 PH1 (PH2 /SH / Calls / medrun or etc)",
     q5: "4th floor",
@@ -11,7 +11,7 @@ let currentStep = 0;
     q8: "Only HC in RP or Voice Radio",
     q9: "In the Code-A logs channel under EMS Email/Discord",
     q10: "Just write Code-A and the Reason of Code A, no tagging needed", // Add if you have more questions
-    q11: "?",
+    q11: "$1,000 without insurance, same price with medical insurance",
     q12: "?"
   };
 // Attach click listeners to all "Next" buttons
@@ -95,6 +95,7 @@ document.getElementById("quizForm").addEventListener("submit", async e => {
   if (response.ok) {
     document.getElementById("quizForm").remove();
     document.getElementById("thanks").classList.remove("hidden");
+    localStorage.setItem("quizSubmitted","true")
   } else {
     alert("Failed to send. Try again.");
   }
