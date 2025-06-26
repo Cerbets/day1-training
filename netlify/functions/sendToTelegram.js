@@ -1,13 +1,15 @@
 export async function handler(event) {
-  const data = JSON.parse(event.body);
+  const TELEGRAM_TOKEN =process.env.TELEGRAM_TOKEN;
+  const CHAT_ID = process.env.TELEGRAM_CHAT_ID
 
-  const TELEGRAM_TOKEN = "7401471745:AAFStdj_RtmmwXZ2d14qZdCkQp5zElyN-0Y";//process.env.TELEGRAM_TOKEN;
-  const CHAT_ID = "8439" ;//process.env.TELEGRAM_CHAT_ID
+let message = `📩 New Form Submission:\n\n👤 Name: ${data2.name}\n\n`;
 
-  const message = `📩 New Form Submission:\n\n👤 Name: ${data.name}\n❓ Question 1: ${data.q1}`;
+for (let i = 1; i <= 12; i++) {
+  message += `❓ Question ${i}: ${data2[`q${i}`]}\n`;
+}
 
   const telegramURL = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`;
-
+   localStorage.setItem("quizSubmitted", "true");
   const res = await fetch(telegramURL, {
     method: 'POST',
     headers: { "Content-Type": "application/json" },
@@ -20,5 +22,8 @@ export async function handler(event) {
   return {
     statusCode: 200,
     body: JSON.stringify({ status: 'sent' }),
+    
   };
+
+ 
 }
