@@ -54,8 +54,8 @@ function validateStep(stepIndex) {
   const radios = document.querySelectorAll(`input[name="${questionName}"]`);
   const selected = Array.from(radios).some(r => r.checked);
 
-  if (!selected || currentStep > 12) {
-    console.alert(currentStep)
+  if (!selected && currentStep < 13) {
+    console.log(currentStep)
     alert("⚠️ Please select one of the answers before continuing.");
     return false;
   }
