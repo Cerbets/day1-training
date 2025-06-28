@@ -17,7 +17,7 @@ let currentStep = 0;
 // Attach click listeners to all "Next" buttons
 document.querySelectorAll(".next").forEach((btn, index) => {
   btn.addEventListener("click", () => {
-    if (validateStep(index)) {
+    if (validateStep(index) || index > 12) {
       steps[currentStep].classList.remove("active");
       steps[++currentStep].classList.add("active");
     }
@@ -49,12 +49,12 @@ function validateStep(stepIndex) {
   }
 
   // Step 1: Validate radio selected
- if (stepIndex >= 1) {
+ if (stepIndex >= 1 ) {
   const questionName = `q${stepIndex}`; // dynamically create name
   const radios = document.querySelectorAll(`input[name="${questionName}"]`);
   const selected = Array.from(radios).some(r => r.checked);
 
-  if (!selected) {
+  if (!selected || index > 12) {
     alert("⚠️ Please select one of the answers before continuing.");
     return false;
   }
