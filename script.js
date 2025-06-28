@@ -12,7 +12,9 @@ let currentStep = 0;
     q9: "In the Code-A logs channel under EMS Email/Discord",
     q10: "Just write Code-A and the Reason of Code A, no tagging needed", // Add if you have more questions
     q11: "$1,000 without insurance, same price with medical insurance",
-    q12: "$1,300 med kit,$500 pill with insurance,70k sex change"
+    q12: "$1,300 med kit,$500 pill with insurance,70k sex change",
+    q13: "false",
+
   };
 // Attach click listeners to all "Next" buttons
 document.querySelectorAll(".next").forEach((btn, index) => {
