@@ -66,12 +66,12 @@ function validateStep(stepIndex) {
 
 }
 document.addEventListener("DOMContentLoaded", () => {
-  if (localStorage.getItem("quizSubmitted2") === "true") {
+  if (localStorage.getItem("quizSubmitted3") === "true") {
     document.getElementById("alreadySubmittedPopup").classList.remove("hidden");
   }
 });
 document.getElementById("quizForm").addEventListener("submit", async e => {
-   if (localStorage.getItem("quizSubmitted2") === "true") {
+   if (localStorage.getItem("quizSubmitted3") === "true") {
     document.getElementById("quizForm").innerHTML = "<p>Вы уже отправили форму.</p>";
     return;
   }
@@ -106,7 +106,7 @@ document.getElementById("quizForm").addEventListener("submit", async e => {
   if (response.ok) {
     document.getElementById("quizForm").remove();
     document.getElementById("thanks").classList.remove("hidden");
-    localStorage.setItem("quizSubmitted2","true")
+    localStorage.setItem("quizSubmitted3","true")
   } else {
     alert("Failed to send. Try again.");
   }
