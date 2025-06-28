@@ -17,7 +17,7 @@ let currentStep = 0;
 // Attach click listeners to all "Next" buttons
 document.querySelectorAll(".next").forEach((btn, index) => {
   btn.addEventListener("click", () => {
-    if (validateStep(index) || index > 12) {
+    if (validateStep(index) || currentStep > 12) {
       steps[currentStep].classList.remove("active");
       steps[++currentStep].classList.add("active");
     }
@@ -28,7 +28,7 @@ document.addEventListener('visibilitychange', () => {
     console.log('Пользователь переключился на другую вкладку или свернул окно');
     // Отправьте это событие на сервер или сохраните локально
   } else {
-    alert("2This is just a simple check to test you. Please don't look up the answers — it's totally fine if you get something wrong, nothing bad will happen.")
+    alert("This is just a simple check to test you. Please don't look up the answers — it's totally fine if you get something wrong, nothing bad will happen.")
   }
 });
 
