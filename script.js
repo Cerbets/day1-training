@@ -84,7 +84,7 @@ document.getElementById("quizForm").addEventListener("submit", async e => {
   data.name = formData.get("name");
 
   // Loop through q1 to q12
-  for (let i = 1; i <= 12; i++) {
+  for (let i = 1; i <= 13; i++) {
     const value = formData.get(`q${i}`);
     if (value) {
       console.log(correctAnswers["q"+i])
